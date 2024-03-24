@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>RecycleMate</title>
+</head>
+<style>
+    body{
+        background-color: rgba(0, 0, 0, 0.822);
+    }
+</style>
+<body>
+    <div class="outerbox">
+        <a href="index.html" style="text-decoration: none;">
+            <button class="Home">RecycleMate</button>
+        </a>
+
+
+        <a href="index.html" style="text-decoration: none;">
+            <button class="home-button">Home</button>
+        </a>
+
+    
+        <a href="index_about.html" style="text-decoration: none;">
+            <button class="about-button">About</button>
+        </a>
+
+
+        <a href="index_feature.html" style="text-decoration: none;">
+            <button class="r-button">Features</button>
+        </a>
+
+
+        <a href="index_3r.html" style="text-decoration: none;">
+            <button class="r-button">3R's</button>
+        </a>
+
+
+        <a href="index_learn.html" style="text-decoration: none;">
+            <button class="r-button">Learn More</button>
+        </a>
+    </div>
+    <h1 class="ai-head">How to use the AIChatbot</h1>
+    <p class="ai-paragraph">1.Click the small chat icon on the bottom right corner.</p>
+    <img src="homepage.png" class="step1-img">
+    <p class="ai-paragraph">2.After that, you ask the chatbot anything question you have and it will responde using 3R principles.</p>
+    <img src="Aibot.png" class="step1-img">
+    <p class="ai-paragraph">3.One use case of the AI can be to ask it a problem with your devices or anything in general.
+        In this case, let's say our laptop is blue screen.
+    </p>
+    <img src="question.png" class="step1-img">
+    <p class="ai-paragraph">4.The AI will then give you an answer based on the 3R principles.</p>
+    <img src="answer.png" class="step1-img">
+    <p class="ai-paragraph">5.Then, based on the solution you like the most, you can ask the AI where or how to carry out the solution.</p>
+    <img src="where_q.png" class="step1-img">
+    <p class="ai-paragraph">6.Finally, the AI will give you some advice and suggestions</p>
+    <img src="answer2.png" class="step1-img">
+    <p class="ai-paragraph">7. I hope that after this you know how the AIChat bot works and it helps you!</p>
+    <h1 class="ending1">TOGETHER, LET'S MAKE THE WORLD A GREENER PLACE THROUGH THR POWER OF AI</h1>
+    <img src="RecycleMate_logo.png" class="step1-img1">
+    <script type="module">
+        import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+        Chatbot.init({
+            chatflowid: "a56aab1e-282f-4005-9abc-537e14988037",
+            apiHost: "https://recyclemates.onrender.com",
+            chatflowConfig: {
+                // topK: 2
+            },
+            theme: {
+                button: {
+                    backgroundColor: "#3B81F6",
+                    right: 20,
+                    bottom: 20,
+                    size: "large",
+                    iconColor: "white",
+                    customIconSrc: "https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg",
+                },
+                chatWindow: {
+                    welcomeMessage: "Hello! My name is KLM, your personal 3R assistant AIChatbot. If you have any questions, you may ask me :>",
+                    backgroundColor: "#ffffff",
+                    height: 700,
+                    width: 400,
+                    fontSize: 16,
+                    poweredByTextColor: "#303235",
+                    botMessage: {
+                        backgroundColor: "#f7f8ff",
+                        textColor: "#303235",
+                        showAvatar: true,
+                        avatarSrc: "https://i.ibb.co/RbTW4wd/Recycle-Mate-logo.png",
+                    },
+                    userMessage: {
+                        backgroundColor: "#3B81F6",
+                        textColor: "#ffffff",
+                        showAvatar: true,
+                        avatarSrc: "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png",
+                    },
+                    textInput: {
+                        placeholder: "Type your question",
+                        backgroundColor: "#ffffff",
+                        textColor: "#303235",
+                        sendButtonColor: "#3B81F6",
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>

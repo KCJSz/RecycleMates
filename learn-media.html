@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>RecycleMate</title>
+    <style>
+        body{
+            background-color: gray;
+        background-image:url(777.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        background-blend-mode: multiply;
+        }
+    </style>
+</head>
+<body>
+ 
+    <div class="outerbox">
+        <a href="index.html" style="text-decoration: none;"><button class="Home">RecycleMate</button></a>
+        <a href="index.html" style="text-decoration: none;"><button class="home-button">Home</button></a>
+        <a href="index_about.html" style="text-decoration: none;"><button class="about-button">About</button></a>
+        <a href="index_feature.html" style="text-decoration: none;"><button class="r-button">Features</button></a>
+        <a href="index_3r.html" style="text-decoration: none;"><button class="r-button">3R's</button></a>
+        <a href="index_learn.html" style="text-decoration: none;"><button class="r-button">Learn More</button></a>
+    </div>
+    <h1 style="font-size: 3em; text-align: center; color: aliceblue;text-decoration: underline;">Steps to make your laptop CPU to a media center</h1>
+    <p class="paper-p">1.Choose a Media Center Software: Select a media center software that best suits your needs. Popular options include Kodi, Plex, and Emby. These programs provide a user-friendly interface for organizing and streaming media.</p>
+    <img src="media.jpg" class="step1-img">
+    <p class="paper-p">2.Connect to Your TV: If your laptop has an HDMI port, you can connect it directly to your TV. Alternatively, you can use a HDMI cable to connect your laptop to the TV. This allows you to display the media center interface on the larger screen.</p>
+    <img src="connect.jpg" class="step1-img">
+    <p class="paper-p">3.Organize Your Media: Transfer your movies, TV shows, music, and other media files to your laptop's storage. Use the media center software to organize and categorize your media library for easy access.</p>
+    <img src="sorting.jpg" class="step1-img">
+    <p class="paper-p">4.Setup Remote Control: Consider using a wireless keyboard/trackpad combo or a remote control to navigate the media center interface from the comfort of your couch.</p>
+    <img src="remote.jpg" class="step1-img">
+
+    <script type="module">
+        import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+        Chatbot.init({
+            chatflowid: "a56aab1e-282f-4005-9abc-537e14988037",
+            apiHost: "https://recyclemates.onrender.com",
+            chatflowConfig: {
+                // topK: 2
+            },
+            theme: {
+                button: {
+                    backgroundColor: "#3B81F6",
+                    right: 20,
+                    bottom: 20,
+                    size: "large",
+                    iconColor: "white",
+                    customIconSrc: "https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg",
+                },
+                chatWindow: {
+                    welcomeMessage: "Hello! My name is KLM, your personal 3R assistant AIChatbot. If you have any questions, you may ask me :>",
+                    backgroundColor: "#ffffff",
+                    height: 700,
+                    width: 400,
+                    fontSize: 16,
+                    poweredByTextColor: "#303235",
+                    botMessage: {
+                        backgroundColor: "#f7f8ff",
+                        textColor: "#303235",
+                        showAvatar: true,
+                        avatarSrc: "https://i.ibb.co/RbTW4wd/Recycle-Mate-logo.png",
+                    },
+                    userMessage: {
+                        backgroundColor: "#3B81F6",
+                        textColor: "#ffffff",
+                        showAvatar: true,
+                        avatarSrc: "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png",
+                    },
+                    textInput: {
+                        placeholder: "Type your question",
+                        backgroundColor: "#ffffff",
+                        textColor: "#303235",
+                        sendButtonColor: "#3B81F6",
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>

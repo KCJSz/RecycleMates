@@ -1,135 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RecycleMate</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RecycleMate - Features</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-  <style>
-  body {
-    background-image: url("777.jpg"); /* optional background image */
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: multiply;
-    font-family: system-ui, sans-serif;
-    min-height: 100vh;
-    overflow-x: hidden;
-    position: relative;
-    margin: 0;
-    padding: 0;
-    padding-top: 90px; /* prevent content overlap with fixed navbar */
-  }
+    <style>
+        body {
+          margin: 0;
+          padding-top: 80px; /* ensures content is not hidden behind navbar */
+          min-height: 100vh;
+          font-family: system-ui, sans-serif;
 
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.55); /* dark overlay */
-    z-index: -1;
-  }
+          /* Gradient Background */
+          background: linear-gradient(135deg, #1e3c72, #2a5298, #1abc9c);
+          background-attachment: fixed;
+          background-size: cover;
+          background-repeat: no-repeat;
 
-  /* Bubble Background Animation */
-  .bubble-container {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
-
-  .bubble span {
-    position: absolute;
-    display: block;
-    width: 20px;
-    height: 20px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    animation: animate 15s linear infinite;
-    bottom: -150px;
-  }
-
-  .bubble span:nth-child(1)  { left: 10%; animation-delay: 0s;  animation-duration: 12s; }
-  .bubble span:nth-child(2)  { left: 20%; animation-delay: 2s;  animation-duration: 15s; }
-  .bubble span:nth-child(3)  { left: 25%; animation-delay: 4s;  animation-duration: 10s; }
-  .bubble span:nth-child(4)  { left: 40%; animation-delay: 0s;  animation-duration: 18s; }
-  .bubble span:nth-child(5)  { left: 55%; animation-delay: 3s;  animation-duration: 12s; }
-  .bubble span:nth-child(6)  { left: 65%; animation-delay: 5s;  animation-duration: 20s; }
-  .bubble span:nth-child(7)  { left: 75%; animation-delay: 1s;  animation-duration: 16s; }
-  .bubble span:nth-child(8)  { left: 85%; animation-delay: 2s;  animation-duration: 14s; }
-  .bubble span:nth-child(9)  { left: 95%; animation-delay: 4s;  animation-duration: 19s; }
-  .bubble span:nth-child(10) { left: 50%; animation-delay: 6s;  animation-duration: 17s; }
-
-  /* Extra bubbles (11–20) */
-  .bubble span:nth-child(11) { left: 5%;  animation-delay: 7s;  animation-duration: 13s; }
-  .bubble span:nth-child(12) { left: 15%; animation-delay: 1s;  animation-duration: 11s; }
-  .bubble span:nth-child(13) { left: 30%; animation-delay: 3s;  animation-duration: 20s; }
-  .bubble span:nth-child(14) { left: 45%; animation-delay: 6s;  animation-duration: 14s; }
-  .bubble span:nth-child(15) { left: 60%; animation-delay: 2s;  animation-duration: 16s; }
-  .bubble span:nth-child(16) { left: 70%; animation-delay: 4s;  animation-duration: 18s; }
-  .bubble span:nth-child(17) { left: 80%; animation-delay: 8s;  animation-duration: 12s; }
-  .bubble span:nth-child(18) { left: 90%; animation-delay: 5s;  animation-duration: 19s; }
-  .bubble span:nth-child(19) { left: 35%; animation-delay: 9s;  animation-duration: 15s; }
-  .bubble span:nth-child(20) { left: 65%; animation-delay: 10s; animation-duration: 17s; }
-
-  @keyframes animate {
-    0% {
-      transform: translateY(0) scale(0);
-      opacity: 0.5;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(-1000px) scale(1);
-      opacity: 0;
-    }
-  }
-
-  /* Language Dropdown (bottom-left corner) */
-  .lang-dropdown {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    z-index: 1000;
-  }
-  </style>
-
-  <!-- Bootstrap CSS -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="index.css" />
+          color: white;
+        }
+    </style>
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light custom-navbar fixed-top mx-auto px-3 rounded-3">
+  <nav class="navbar navbar-expand-lg navbar-light custom-navbar fixed-top px-3 rounded-3">
     <div class="container">
-      <a class="navbar-brand fw-bold fs-2 text-white" href="index.2html">RecycleMate</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+      <a class="navbar-brand fw-bold fs-2 text-white" href="index.html">RecycleMate</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav gap-3">
           <li class="nav-item"><a class="nav-link text-white fw-semibold" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="index_about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="index_feature.html">Features</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="index_about.html">How to Use</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-semibold active" href="index_feature.html">Features</a></li>
           <li class="nav-item"><a class="nav-link text-white fw-semibold" href="index_3r.html">3R's</a></li>
           <li class="nav-item"><a class="nav-link text-white fw-semibold" href="index_learn.html">Learn More</a></li>
         </ul>
@@ -140,35 +49,67 @@
   <!-- Bubble Background -->
   <div class="bubble-container">
     <div class="bubble">
-      <!-- 20 bubbles -->
       <span></span><span></span><span></span><span></span><span></span>
       <span></span><span></span><span></span><span></span><span></span>
       <span></span><span></span><span></span><span></span><span></span>
-      <span></span><span></span><span></span><span></span>
     </div>
   </div>
 
-  <!-- Main Title -->
-  <div class="d-flex flex-column justify-content-center align-items-center text-center text-white" style="min-height: calc(100vh - 90px);">
-    <h1 class="display-2 fw-bold">RecycleMate</h1>
-    <p class="lead">Making The World a Greener Place through AI!</p>
+  <!-- Features Content -->
+  <div class="container py-5">
+    <h1 class="ai-head">How to use the AIChatbot</h1>
+
+    <div class="card-like">
+      <p class="ai-paragraph">1. Click the small chat icon on the bottom right corner.</p>
+      <img src="homepage.png" class="step1-img">
+    </div>
+
+    <div class="card-like">
+      <p class="ai-paragraph">2. After that, you ask the chatbot any question you have and it will respond using 3R principles.</p>
+      <img src="Aibot.png" class="step1-img">
+    </div>
+
+    <div class="card-like">
+      <p class="ai-paragraph">3. One use case of the AI can be to ask it a problem with your devices or anything in general. In this case, let's say our laptop is blue screen.</p>
+      <img src="question.png" class="step1-img">
+    </div>
+
+    <div class="card-like">
+      <p class="ai-paragraph">4. The AI will then give you an answer based on the 3R principles.</p>
+      <img src="answer.png" class="step1-img">
+    </div>
+
+    <div class="card-like">
+      <p class="ai-paragraph">5. Then, based on the solution you like the most, you can ask the AI where or how to carry out the solution.</p>
+      <img src="where_q.png" class="step1-img">
+    </div>
+
+    <div class="card-like">
+      <p class="ai-paragraph">6. Finally, the AI will give you some advice and suggestions.</p>
+      <img src="answer2.png" class="step1-img">
+    </div>
+
+    <div class="card-like text-center">
+      <p class="ai-paragraph">7. I hope that after this you know how the AIChatbot works and it helps you!</p>
+      <h1 class="ending1">TOGETHER, LET'S MAKE THE WORLD A GREENER PLACE THROUGH THE POWER OF AI</h1>
+      <img src="RecycleMate_logo.png" class="step1-img1">
+    </div>
   </div>
-  
-  <!-- Language Dropdown (bottom-left corner) -->
-  <div class="dropdown lang-dropdown">
+
+    <div class="dropdown lang-dropdown">
     <button class="btn btn-outline-light dropdown-toggle" type="button" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">
       🌐 Language
     </button>
     <ul class="dropdown-menu" aria-labelledby="langDropdown">
-      <li><a class="dropdown-item" href="index.html">English</a></li>
-      <li><a class="dropdown-item" href="index(bc).html">Chinese</a></li>
+      <li><a class="dropdown-item" href="index_step.html">English</a></li>
+      <li><a class="dropdown-item" href="index_step(bc).html">Chinese</a></li>
     </ul>
   </div>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-<script type="module">
+  <script type="module">
     import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
     Chatbot.init({
         chatflowid: "e06c5a97-6e38-4e9c-8b5a-29a9b96d3d20",
@@ -276,6 +217,3 @@
 </script>
 </body>
 </html>
-
-
-

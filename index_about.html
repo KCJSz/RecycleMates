@@ -1,131 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>RecycleMate</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RecycleMate - About</title>
+  <style>
+  body {
+    background-image: url(bg_about.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    font-family: system-ui, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    padding-top: 90px; /* prevent content overlap with fixed navbar */
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.55); /* dark overlay */
+    z-index: -1;
+  }
+  </style>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="index.css" />
 </head>
-<style>
-        body{
-            background-color: gray;
-            background-image:url(bg_about.jpg);
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: 100% 100%;
-            background-blend-mode: multiply;
-        }
-</style>
 <body>
-    <div class="outerbox">
-        <a href="index.html" style="text-decoration: none;">
-            <button class="Home">RecycleMate</button>
-        </a>
-
-
-        <a href="index.html" style="text-decoration: none;">
-            <button class="home-button">Home</button>
-        </a>
-
-    
-        <a href="index_about.html" style="text-decoration: none;">
-            <button class="about-button">About</button>
-        </a>
-
-
-        <a href="index_feature.html" style="text-decoration: none;">
-            <button class="r-button">Features</button>
-        </a>
-
-
-        <a href="index_3r.html" style="text-decoration: none;">
-            <button class="r-button">3R's</button>
-        </a>
-
-
-        <a href="index_learn.html" style="text-decoration: none;">
-            <button class="r-button">Learn More</button>
-        </a>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light custom-navbar fixed-top px-3 rounded-3">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-2 text-white" href="index.html">RecycleMate</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav gap-3">
+          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-semibold active" href="index_about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="index_feature.html">Features</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="index_3r.html">3R's</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="index_learn.html">Learn More</a></li>
+        </ul>
+      </div>
     </div>
-    <h1 class="about-what">What is RecycleMate?</h1>
-    <h1 class="problem"></h1>
-    <div class="container1">
-        <div class="meaning">
-            <h2 class="about-whath">Overview</h2>
-            <p class="about-whatp">RecycleMate is a project related to the 3R (reuse, repurpose, and recycle) principles that aims
-                to reduce the amount of recyclable waste by utilizing the power of AI chatbots and the internet. RecycleMate also aims
-                 to increase the recycling rate in Malaysia and, hopefully, the world in the near future.
-            </p>
-            <p class="ending">
-                TOGETHER, LET'S MAKE THE WORLD A GREENER PLACE THROUGH THE POWER OF AI!
-            </p>
-        </div>
-        <div class="about-aim">
-            <div class="bg">
-                <h1 class="about-aimh">Aims and Goals</h1>
-                <p class="about-aimp">
-                    1. Exapand RecycleMate Project influence to a global level
-                </p>
-                <p class="about-aimp">
-                    2. Decrease the amount of waste by as much as possible   
-                </p>
-                <p class="about-aimp">
-                    3. Increase the awareness of 3R and it's uses
-                </p>
-                <p class="about-aimp">
-                    4. Show the use the many useful functions of AI and the web
-                </p>
-                <p class="about-aimp">
-                    5. Make a mobile app version of RecycleMate
-                </p>
-            </div>
-        </div>
+  </nav>
+
+  <!-- Bubble Background -->
+  <div class="bubble-container">
+    <div class="bubble">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
     </div>
-    <script type="module">
-        import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
-        Chatbot.init({
-            chatflowid: "c61ff2ad-b884-4179-aa18-8dfcb34200c0",
-            apiHost: "https://flowise-6-nf19.onrender.com",
-            chatflowConfig: {
-                // topK: 2
+  </div>
+
+  <!-- About Section -->
+  <div class="container py-5">
+    <h1 class="text-center fw-bold text-white mb-5">What is RecycleMate?</h1>
+
+    <!-- Overview Card -->
+    <div class="card-like mb-5">
+      <h2 class="mb-3">Overview</h2>
+      <p>
+        RecycleMate is a project related to the 3R (reuse, repurpose, and recycle) principles that aims
+        to reduce the amount of recyclable waste by utilizing the power of AI chatbots and the internet.
+        RecycleMate also aims to increase the recycling rate in Malaysia and, hopefully, the world in the near future.
+      </p>
+      <p class="fw-bold text-warning text-center">
+        TOGETHER, LET'S MAKE THE WORLD A GREENER PLACE THROUGH THE POWER OF AI!
+      </p>
+    </div>
+
+    <!-- Aims and Goals Card -->
+    <div class="card-like">
+      <h2 class="mb-3">Aims and Goals</h2>
+      <ol class="goals-list">
+        <li>Make RecycleMate available to everyone</li>
+        <li>Ensure it is usable on any device</li>
+        <li>Promote environmental awareness through technology</li>
+        <li>Encourage consistent recycling habits in daily life</li>
+        <li>Support global sustainability efforts with AI solutions</li>
+      </ol>
+    </div>
+  </div>
+  <div class="dropdown lang-dropdown">
+    <button class="btn btn-outline-light dropdown-toggle" type="button" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+      🌐 Language
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="langDropdown">
+      <li><a class="dropdown-item" href="index_about.html">English</a></li>
+      <li><a class="dropdown-item" href="index_about(bc).html">Chinese</a></li>
+    </ul>
+  </div>
+  <script type="module">
+    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+    Chatbot.init({
+        chatflowid: "e06c5a97-6e38-4e9c-8b5a-29a9b96d3d20",
+        apiHost: "https://flowise-6-nf19.onrender.com",
+        chatflowConfig: {
+            /* Chatflow Config */
+        },
+        observersConfig: {
+            /* Observers Config */
+        },
+        theme: {
+            button: {
+                backgroundColor: '#3B81F6',
+                right: 20,
+                bottom: 20,
+                size: 48,
+                dragAndDrop: true,
+                iconColor: 'white',
+                customIconSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
+                autoWindowOpen: {
+                    autoOpen: true,
+                    openDelay: 2,
+                    autoOpenOnMobile: false
+                }
             },
-            theme: {
-                button: {
-                    backgroundColor: "#3B81F6",
-                    right: 20,
-                    bottom: 20,
-                    size: "large",
-                    iconColor: "white",
-                    customIconSrc: "https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg",
+            tooltip: {
+                showTooltip: true,
+                tooltipMessage: 'Hi There 👋!',
+                tooltipBackgroundColor: 'black',
+                tooltipTextColor: 'white',
+                tooltipFontSize: 16
+            },
+            disclaimer: {
+                title: 'Disclaimer',
+                message: "By using this chatbot, you agree to the <a target=\"_blank\" href=\"https://flowiseai.com/terms\">Terms & Condition</a>",
+                textColor: 'black',
+                buttonColor: '#3b82f6',
+                buttonText: 'Start Chatting',
+                buttonTextColor: 'white',
+                blurredBackgroundColor: 'rgba(0, 0, 0, 0.4)',
+                backgroundColor: 'white'
+            },
+            customCSS: ``,
+            chatWindow: {
+                showTitle: true,
+                showAgentMessages: true,
+                title: 'RecycleMate',
+                titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
+                welcomeMessage: 'Hi!,Im KLM, RecycleMate AI',
+                errorMessage: 'Sorry, There seems to be an error',
+                backgroundColor: '#ffffff',
+                backgroundImage: 'enter image path or link',
+                height: 700,
+                width: 400,
+                fontSize: 16,
+                starterPrompts: [
+                    "What is 3R?",
+                    "Who are you?"
+                ],
+                starterPromptFontSize: 15,
+                clearChatOnReload: false,
+                sourceDocsTitle: 'Sources:',
+                renderHTML: true,
+                botMessage: {
+                    backgroundColor: '#f7f8ff',
+                    textColor: '#303235',
+                    showAvatar: true,
+                    avatarSrc: 'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png'
                 },
-                chatWindow: {
-                    welcomeMessage: "Hello! My name is KLM, your personal 3R assistant AIChatbot. If you have any questions, you may ask me :>",
-                    backgroundColor: "#ffffff",
-                    height: 700,
-                    width: 400,
-                    fontSize: 16,
-                    poweredByTextColor: "#303235",
-                    botMessage: {
-                        backgroundColor: "#f7f8ff",
-                        textColor: "#303235",
-                        showAvatar: true,
-                        avatarSrc: "https://i.ibb.co/RbTW4wd/Recycle-Mate-logo.png",
-                    },
-                    userMessage: {
-                        backgroundColor: "#3B81F6",
-                        textColor: "#ffffff",
-                        showAvatar: true,
-                        avatarSrc: "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png",
-                    },
-                    textInput: {
-                        placeholder: "Type your question",
-                        backgroundColor: "#ffffff",
-                        textColor: "#303235",
-                        sendButtonColor: "#3B81F6",
-                    }
+                userMessage: {
+                    backgroundColor: '#3B81F6',
+                    textColor: '#ffffff',
+                    showAvatar: true,
+                    avatarSrc: 'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png'
+                },
+                textInput: {
+                    placeholder: 'Type your question',
+                    backgroundColor: '#ffffff',
+                    textColor: '#303235',
+                    sendButtonColor: '#3B81F6',
+                    maxChars: 50,
+                    maxCharsWarningMessage: 'You exceeded the characters limit. Please input less than 50 characters.',
+                    autoFocus: true,
+                    sendMessageSound: true,
+                    sendSoundLocation: 'send_message.mp3',
+                    receiveMessageSound: true,
+                    receiveSoundLocation: 'receive_message.mp3'
+                },
+                feedback: {
+                    color: '#303235'
+                },
+                dateTimeToggle: {
+                    date: true,
+                    time: true
+                },
+                footer: {
+                    textColor: '#303235',
+                    text: 'Powered by',
+                    company: 'Flowise',
+                    companyLink: 'https://flowiseai.com'
                 }
             }
-        })
-    </script>
+        }
+    })
+</script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
